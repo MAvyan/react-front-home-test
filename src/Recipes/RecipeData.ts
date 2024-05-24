@@ -64,6 +64,23 @@ const fondantChocolat: RecipeType = {
   tags: [dessert, winter],
 };
 
+const glaceVanille: RecipeType = {
+  nom: "Glace à la vanille",
+  description:
+    "La glace à la vanille est une glace à la vanille qui fond en bouche",
+  imageURL:
+    "https://www.guydemarle.com/rails/active_storage/representations/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBBc0ZvIiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--333bff76e254e1934153f809f2d9cc2b5967da52/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdCam9VWTI5dFltbHVaVjl2Y0hScGIyNXpld2c2QzNKbGMybDZaVWtpRFRZd01IZzJNREJlQmpvR1JWUTZER2R5WVhacGRIbEpJZ3REWlc1MFpYSUdPd2RVT2dsamNtOXdTU0lRTmpBd2VEWXdNQ3N3S3pBR093ZFUiLCJleHAiOm51bGwsInB1ciI6InZhcmlhdGlvbiJ9fQ==--929a1958a8630156464b089800ca739f1b4570de/fondant-au-chocolat.jpg",
+  ingredients: [chocolate, egg, flour, butter, sugar],
+  etapes: stepsFondantChocolat,
+  ingredientsWithQuantity: [
+    { ingredient: sugar, quantity: 200, unit: "g" },
+    { ingredient: flour, quantity: 50, unit: "g" },
+    { ingredient: chocolate, quantity: 200, unit: "g" },
+    { ingredient: butter, quantity: 150, unit: "g" },
+  ],
+  tags: [dessert, winter],
+};
+
 const pearPie: RecipeType = {
   nom: "Tarte amandine aux poires",
   description:
@@ -101,6 +118,7 @@ const waldorfSalad: RecipeType = {
 export const allRecipes: ListOfRecipes = [
   pavlova,
   fondantChocolat,
+  glaceVanille,
   pearPie,
   waldorfSalad,
 ];
