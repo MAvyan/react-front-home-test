@@ -25,6 +25,18 @@ export const flour: IngredientType = {
   prefix: "de",
 };
 
+export const vanilla: IngredientType = {
+  name: "vanille",
+  unit: "kg",
+  prefix: "de",
+};
+
+export const levure: IngredientType = {
+  name: "levure",
+  unit: "g",
+  prefix: "de",
+};
+
 export const pear: IngredientType = {
   name: "poire",
   names: "poires",

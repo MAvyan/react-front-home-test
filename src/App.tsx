@@ -5,12 +5,14 @@ import {
   allRecipes,
   sugarRecipes,
   summerRecipes,
+  springRecipes,
   dessertRecipes,
   noEggsRecipes,
   chocolateRecipes,
   autumnRecipes,
   veganRecipes,
   chocolateDessertRecipes,
+  toShareRecipes,
 } from "./Recipes/RecipeData";
 import { TagList } from "./Tagfilter/ListeDesTags";
 import { tagList } from "./Tags/TagData";
@@ -31,6 +33,8 @@ export default function App() {
       <button onClick={() => setFilter("eggs free")}>Sans Oeufs</button>
       <button onClick={() => setFilter("autumn")}> Autumn</button>
       <button onClick={() => setFilter("vegan")}> Vegan</button>
+      <button onClick={() => setFilter("spring")}> Printemps</button>
+      <button onClick={() => setFilter("toShare")}> A Partager</button>
       {filter === "all" && <Recipes recipes={allRecipes} />}
       {filter === "sugar" && <Recipes recipes={sugarRecipes} />}
       {filter === "summer" && <Recipes recipes={summerRecipes} />}
@@ -42,6 +46,8 @@ export default function App() {
       {filter === "chocolate" && <Recipes recipes={chocolateRecipes} />}
       {filter === "autumn" && <Recipes recipes={autumnRecipes} />}
       {filter === "vegan" && <Recipes recipes={veganRecipes} />}
+      {filter === "spring" && <Recipes recipes={springRecipes} />}
+      {filter === "toShare" && <Recipes recipes={toShareRecipes} />}
     </div>
   );
 }

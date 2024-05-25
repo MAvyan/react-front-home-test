@@ -20,11 +20,31 @@ export const vegan: TagType = {
   color: "green",
 };
 
+export const levure: TagType = {
+  id: "levure",
+  name: {
+    fr: "levure",
+    en: "levure",
+  },
+  type: "diet",
+  color: "green",
+};
+
 export const appetizer: TagType = {
   id: "appetizer",
   name: {
     fr: "entrée",
     en: "appetizer",
+  },
+  type: "plateType",
+  color: "purple",
+};
+
+export const toShare: TagType = {
+  id: "toShare",
+  name: {
+    fr: "A Partager",
+    en: "To Share",
   },
   type: "plateType",
   color: "purple",
@@ -55,6 +75,16 @@ export const winter: TagType = {
   name: {
     fr: "hiver",
     en: "winter",
+  },
+  type: "saison",
+  color: "blue",
+};
+
+export const spring: TagType = {
+  id: "spring",
+  name: {
+    fr: "printemps",
+    en: "spring",
   },
   type: "saison",
   color: "blue",

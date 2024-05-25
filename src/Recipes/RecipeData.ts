@@ -6,6 +6,7 @@ import {
   flour,
   redFruits,
   chocolate,
+  levure,
   egg,
   butter,
   almondPowder,
@@ -14,6 +15,7 @@ import {
   salad,
   cucumber,
   feta,
+  vanilla,
 } from "../Ingredients/IngredientData";
 
 import {
@@ -29,6 +31,8 @@ import {
   summer,
   vegan,
   winter,
+  spring,
+  toShare,
 } from "../Tags/TagData";
 
 const pavlova: RecipeType = {
@@ -44,7 +48,7 @@ const pavlova: RecipeType = {
     { ingredient: redFruits, quantity: 100, unit: "g" },
     { ingredient: cream, quantity: 20, unit: "cl" },
   ],
-  tags: [summer, dessert],
+  tags: [summer, dessert, toShare],
 };
 
 const fondantChocolat: RecipeType = {
@@ -52,7 +56,7 @@ const fondantChocolat: RecipeType = {
   description:
     "Le fondant au chocolat est un gâteau au chocolat qui fond en bouche",
   imageURL:
-    "https://www.guydemarle.com/rails/active_storage/representations/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBBc0ZvIiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--333bff76e254e1934153f809f2d9cc2b5967da52/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdCam9VWTI5dFltbHVaVjl2Y0hScGIyNXpld2c2QzNKbGMybDZaVWtpRFRZd01IZzJNREJlQmpvR1JWUTZER2R5WVhacGRIbEpJZ3REWlc1MFpYSUdPd2RVT2dsamNtOXdTU0lRTmpBd2VEWXdNQ3N3S3pBR093ZFUiLCJleHAiOm51bGwsInB1ciI6InZhcmlhdGlvbiJ9fQ==--929a1958a8630156464b089800ca739f1b4570de/fondant-au-chocolat.jpg",
+    "https://assets.afcdn.com/recipe/20230620/143629_w600.jpg",
   ingredients: [chocolate, egg, flour, butter, sugar],
   etapes: stepsFondantChocolat,
   ingredientsWithQuantity: [
@@ -61,7 +65,25 @@ const fondantChocolat: RecipeType = {
     { ingredient: chocolate, quantity: 200, unit: "g" },
     { ingredient: butter, quantity: 150, unit: "g" },
   ],
-  tags: [dessert, winter],
+  tags: [dessert, winter, toShare],
+};
+
+const glaceVanille: RecipeType = {
+  nom: "Sablé à la vanille",
+  description:
+    "La glace à la vanille est une glace à la vanille qui fond en bouche",
+  imageURL:
+    "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSlPlw2c3JY-bXajav2yaJ11IJ_TK1A9dFz9t9G-t2tbQ&s",
+  ingredients: [chocolate, egg, flour, butter, sugar],
+  etapes: stepsFondantChocolat,
+  ingredientsWithQuantity: [
+    { ingredient: sugar, quantity: 200, unit: "g" },
+    { ingredient: flour, quantity: 50, unit: "g" },
+    { ingredient: vanilla, quantity: 200, unit: "g" },
+    { ingredient: butter, quantity: 150, unit: "g" },
+    { ingredient: levure, quantity: 150, unit: "g" },
+  ],
+  tags: [dessert, spring, toShare],
 };
 
 const pearPie: RecipeType = {
@@ -78,7 +100,7 @@ const pearPie: RecipeType = {
     { ingredient: sugar, quantity: 150, unit: "g" },
     { ingredient: egg, quantity: 2 },
   ],
-  tags: [dessert, autumn],
+  tags: [dessert, autumn, toShare],
 };
 
 const waldorfSalad: RecipeType = {
@@ -101,6 +123,7 @@ const waldorfSalad: RecipeType = {
 export const allRecipes: ListOfRecipes = [
   pavlova,
   fondantChocolat,
+  glaceVanille,
   pearPie,
   waldorfSalad,
 ];
@@ -157,4 +180,14 @@ export const autumnRecipes: RecipeType[] = allRecipes.filter((recette) => {
 export const veganRecipes: RecipeType[] = allRecipes.filter((recette) => {
   const tagIds: string[] = recette.tags.map((tag) => tag.id);
   return tagIds.includes("vegan");
+});
+
+export const springRecipes: RecipeType[] = allRecipes.filter((recette) => {
+  const tagIds: string[] = recette.tags.map((tag) => tag.id);
+  return tagIds.includes("spring");
+});
+
+export const toShareRecipes: RecipeType[] = allRecipes.filter((recette) => {
+  const tagIds: string[] = recette.tags.map((tag) => tag.id);
+  return tagIds.includes("toShare");
 });
