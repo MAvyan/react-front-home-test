@@ -74,7 +74,7 @@ const glaceVanille: RecipeType = {
     "La glace à la vanille est une glace à la vanille qui fond en bouche",
   imageURL:
     "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSlPlw2c3JY-bXajav2yaJ11IJ_TK1A9dFz9t9G-t2tbQ&s",
-  ingredients: [chocolate, egg, flour, butter, sugar],
+  ingredients: [egg, flour, butter, sugar, vanilla, levure],
   etapes: stepsFondantChocolat,
   ingredientsWithQuantity: [
     { ingredient: sugar, quantity: 200, unit: "g" },
@@ -92,7 +92,7 @@ const pearPie: RecipeType = {
     "La tarte au poire est une tarte faite à base d'un appareil à l'amande, d'une pâte sablée et de poires",
   imageURL:
     "https://assets.afcdn.com/recipe/20201228/116793_w1200h800c1cx1060cy707cxb2121cyb1414.webp",
-  ingredients: [almondPowder, sugar, butter, flour, pear],
+  ingredients: [almondPowder, sugar, butter, flour, pear, egg],
   etapes: stepsTarteAuxPoires,
   ingredientsWithQuantity: [
     { ingredient: pear, quantity: 2 },
